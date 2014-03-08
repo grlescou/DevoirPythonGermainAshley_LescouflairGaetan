@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'gestionCours',
     'DjApp',
+    'Prof'
 )
 
 
@@ -132,10 +133,6 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'template').replace('\\','/'),
-)
-
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
@@ -143,6 +140,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    "DjApp/template/static",
 
 )
 
