@@ -9,7 +9,7 @@ from django.shortcuts import render_to_response, HttpResponseRedirect, HttpRespo
 
 
 def prof (request):
-    t = get_template('Proftemplate\Accueil.html')
+    t = get_template('Proftemplate/Accueil.html')
     html = t.render(Context())
     return HttpResponse(html)
 
