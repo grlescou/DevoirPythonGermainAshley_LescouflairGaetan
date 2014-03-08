@@ -23,19 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProfMaster.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjApp/template/ProfMaster.html">
+      <file leaf-file-name="AdminMaster.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/AdminMaster.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="94" selection-start="35" selection-end="247" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1139">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="24.884615" vertical-offset="647" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="esih4.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProfMaster.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/ProfMaster.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="39" selection-start="676" selection-end="676" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1139">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esih4.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjApp/template/esih4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="53" selection-start="1030" selection-end="1030" vertical-scroll-proportion="1.3976084" vertical-offset="0" max-vertical-offset="1258">
+            <state line="19" column="42" selection-start="352" selection-end="352" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -70,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DjApp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="39" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state line="19" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.4647482" vertical-offset="0" max-vertical-offset="695">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -95,7 +104,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="29" column="0" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
               <folding>
-                <marker date="1394249101880" expanded="true" signature="0:362" placeholder="import ..." />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,13 +138,13 @@
         <option value="$PROJECT_DIR$/DjApp/template/Admintemplate/Listing_Cours.html" />
         <option value="$PROJECT_DIR$/DjApp/template/Proftemplate/Accueil.html" />
         <option value="$PROJECT_DIR$/Prof/urls.py" />
-        <option value="$PROJECT_DIR$/DjApp/template/ProfMaster.html" />
         <option value="$PROJECT_DIR$/DjApp/template/Proftemplate/modification_Cours.html" />
         <option value="$PROJECT_DIR$/Prof/views.py" />
         <option value="$PROJECT_DIR$/DjApp/settings.py" />
         <option value="$PROJECT_DIR$/DjApp/urls.py" />
         <option value="$PROJECT_DIR$/gestionCours/views.py" />
         <option value="$PROJECT_DIR$/DjApp/template/esih4.html" />
+        <option value="$PROJECT_DIR$/DjApp/template/ProfMaster.html" />
       </list>
     </option>
   </component>
@@ -653,15 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prof/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <folding>
-            <marker date="1394249101880" expanded="true" signature="0:362" placeholder="import ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DjApp/template/Proftemplate/Accueil.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="31" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="425">
@@ -669,26 +669,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/ProfMaster.html">
+    <entry file="file://$PROJECT_DIR$/DjApp/template/AdminMaster.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="94" selection-start="35" selection-end="247" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1139">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="24.884615" vertical-offset="647" max-vertical-offset="1921">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prof/urls.py">
+    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+        <state line="19" column="42" selection-start="352" selection-end="352" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1258">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,10 +692,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4.html">
+    <entry file="file://$PROJECT_DIR$/Prof/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="53" selection-start="1030" selection-end="1030" vertical-scroll-proportion="1.3976084" vertical-offset="0" max-vertical-offset="1258">
+        <state line="29" column="0" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prof/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/ProfMaster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="39" selection-start="676" selection-end="676" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.4647482" vertical-offset="0" max-vertical-offset="695">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
