@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     {% load staticfiles %}
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/head.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% block css %}     {% endblock %}
+    <title>{% block title %}Prof master{% endblock %}</title>
+</head>
+<body>
+
+<div id="head-content">
+ {% load staticfiles %}
+<div> <img src="{% static 'images/esih.jpg' %}" id="logo"></div>
+
+<nav id="menu-content">
+<ul id="menu">
+
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Mes Cours</a>
+
+
+        <li><a href="#">Mon CV </a></li>
+
+        <li><a href="{% url 'Prof:modif'  %}">Modification Mon cours </a></li>
+
+
+</ul>
+
+</nav>
+
+
+</div>
+<div id="corps">
+    <div id="content-title">
+
+    {% block content-title %}
+
+    {% endblock %}
+    </div>
+
+
+ {% block content %}
+
+
+
+    {% endblock %}
+
+
+</div>
+
+<div id="footer">
+
+<hr>
+<h6>site de gestion de description de cours...</h6>
+
+
+</div>
+
+
+</body>
+</html>
