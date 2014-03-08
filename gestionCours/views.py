@@ -821,9 +821,9 @@ def admin_Show_CV_professeur (request):
         html = t.render(Context({'prof': et}))
         #html = t.render(Context())
         return HttpResponse(html)
-    except :
+    except  Exception as e:
         t = get_template('404Error.html')
-        html = t.render(Context({'info': 'Erreur dans la page '}))
+        html = t.render(Context({'info': 'Erreur dans la page '+e.__str__()}))
         return HttpResponse(html)
 
 
