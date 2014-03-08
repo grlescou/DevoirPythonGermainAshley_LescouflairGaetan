@@ -1,0 +1,123 @@
+*{
+	margin:0;
+	padding:0;
+}
+body,html{
+	height:100%;
+	min-height:100%;
+}
+#entete{
+display:inline-block;
+	height:20%;
+	#background-color:#1B019B;
+	#background-color:white;
+	background: rgb(30,87,153); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	margin-left:15%;
+	width:70%;
+	
+}
+#logo{
+	
+	display:inline-block;
+	
+	width:15%;
+	margin-left:3%;
+	height:90%;
+	margin-top:0.4%;
+	
+	border-radius:3px;
+	
+}
+#entete img{
+	
+
+	width:170px;
+	height:120px;
+}
+#entete h2{
+	display:inline-block;
+	position: absolute;
+	top:0;
+	margin-top:5%;
+	margin-left:2%;
+	font-family:Arial;
+	
+	
+}
+body{
+	background:#E3E9E9;
+}
+img{
+	float:right;
+	clip:rect(0 60px 30px 0);
+}
+#menu{
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	
+}
+ a{
+text-decoration:none;
+
+}
+td{
+	background-color:#F97D02;
+	text-align:center;
+
+}
+
+
+
+
+#sentete{
+	margin-left:15%;
+	#margin-top:2px;
+	width:70%;
+	height:3.8%;
+}
+#sentete table{
+	width:100%;
+	border:1px solid blue;
+	
+}
+#entete table{
+border:1px solid #F97D02 ;
+float:right;
+width:30%;
+	
+}
+#icon{
+	border:1px solid blue;
+	
+	#width:4px;
+}
+#icon img{
+	height:20px;
+	width:20px;
+
+}
+#corps{
+	width:69.8%;
+	height:69%;
+	margin-top:1px;
+	margin-left:15%;
+	
+	background-color:white;
+}
+#sc{
+	left:0;
+}
+
+#foot{
+height:7%;
+background-color:#F97D02;
+}

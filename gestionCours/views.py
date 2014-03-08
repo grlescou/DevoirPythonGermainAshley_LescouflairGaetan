@@ -7,18 +7,9 @@ from django.template import RequestContext
 
 
 def home(request):
-  text = """<h1>Bienvenue sur mon Page !</h1>
-            <p> PROJET PYTHON TET NEG!</p>
+    html = get_template('esih4.html')
+    return HttpResponse(html.render(Context()))
 
-            <a href="{% url 'gestionCours:home'  %}" >home</a>
-            <a href="{% url 'gestionCours:getPageForm'  %}" >enregistrement</a>
-            <a href="{% url 'gestionCours:getBigUp'  %}" >BigUP</a>
-            <a href="{% url 'gestionCours:donnee'  %}" >Donnee</a>
-            """
-
-
-
-  return HttpResponse(text)
 
 
 def form(request):
