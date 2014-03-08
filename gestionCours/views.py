@@ -813,7 +813,7 @@ def admin_listing_Professeur (request):
 def admin_Show_CV_professeur (request):
     try:
         ids= request.GET['id']
-        t = get_template('Admintemplate/CV.html')
+        t = get_template('Admintemplate/cv.html')
         item_list = Professeur.objects.all()
         et = Professeur.objects.get(id=ids)
 
