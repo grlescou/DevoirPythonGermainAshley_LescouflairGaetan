@@ -1,0 +1,83 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | listing Nom Cours {% endblock %}
+
+
+    {% block content-title %}
+<h2>   List des Nom Cours </h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+
+  <div id="listing-content">
+
+
+
+
+   <div id="tableW" >
+ <table class='tableH'  align='center'>
+<tr >
+<th  class='tablehead'>ID</th>
+<th  class='tablehead'>Nom</th>
+<th  class='tablehead'>Prenom</th>
+<th  class='tablehead'>Lien vers CV</th>
+
+</tr>
+
+
+
+
+
+        {% for item in item_list %}
+
+
+
+
+
+		 {% if forloop.counter|divisibleby:"2" %}
+
+		   <tr >
+            <td class='c10'>{{ item.id }}</td>
+		   <td class='c1'>{{ item.Nom }}</td>
+          <td class='c12'>{{ item.Prenom }}</td>
+          <td class='c12'><a href="{% url 'gestionCours:admin_Show_CV_professeur' %}?id={{item.id}}" target="_blank">Lien vers CV</a> </td>
+            </tr>
+		   {% else  %}
+		      <td class='c20'>{{ item.id }}</td>
+		   <td class='c2'>{{ item.Nom }}</td>
+          <td class='c22'>{{ item.Prenom }}</td>
+          <td class='c22'><a href="{% url 'gestionCours:admin_Show_CV_professeur' %}?id={{item.id}}" target="_blank">Lien vers CV</a> </td>
+            </tr>
+            {% endif %}
+
+
+        {% empty %}
+            <P>Pas de Nom Cours</P>
+        {% endfor %}
+
+	   	  </table>
+
+	   </div>
+
+
+
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+

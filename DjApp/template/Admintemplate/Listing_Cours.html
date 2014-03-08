@@ -1,0 +1,108 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | listing des Cours {% endblock %}
+
+
+    {% block content-title %}
+<h2>   List des Cours </h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+
+  <div id="listing-content">
+
+
+
+
+   <div id="tableW" >
+ <table class='tableH'  align='center'>
+<tr >
+<th  class='tablehead'>ID</th>
+<th  class='tablehead'>ID Cours </th>
+<th  class='tablehead'>ID Programme </th>
+<th  class='tablehead'>Titre</th>
+<th  class='tablehead'>Professeur et CV</th>
+<th  class='tablehead'>PubliqueCible</th>
+<th  class='tablehead'>Prerequis</th>
+<th  class='tablehead'>Objectif</th>
+<th  class='tablehead'>Description</th>
+<th  class='tablehead'>Plan</th>
+<th  class='tablehead'>Format</th>
+<th  class='tablehead'>Ressource</th>
+<th  class='tablehead'>Evaluation</th>
+<th  class='tablehead'>Voir en Grand Plan</th>
+</tr>
+
+
+        {% for item in item_list %}
+
+
+		 {% if forloop.counter|divisibleby:"2" %}
+
+		   <tr >
+            <td class='c10'>{{ item.id }}</td>
+		   <td class='c1'>{{ item.IDcours }}</td>
+          <td class='c12'>{{ item.IDprogramme}}</td>
+          <td class='c12'>{{ item.Titre }}</td>
+          <td class='c12'>{{ item.IDprofesseur }} et <a href="{% url 'gestionCours:admin_Show_CV_professeur' %}?id={{item.IDprofesseur.id}}" target="_blank">Lien vers CV</a> </td>
+           <td class='c12'>{{ item.PubliqueCible }}</td>
+            <td class='c12'>{%for prek in item.Prerequis.all %} <a href="{% url 'gestionCours:admin_Show_CV_Cours' %}?id={{prek.id}}" target="_blank">{{prek}} </a> {% empty %} pas de prerequis  {% endfor %}</td>
+           <td class='c12'>{% ifequal item.Objectif '' %} pas encore modifier {% else %} {{ item.Objectif}} {% endifequal %}</td>
+           <td class='c12'>{% ifequal item.Description '' %} pas encore modifier {% else %}   {{ item.Description }} {% endifequal %}</td>
+           <td class='c12'>{% ifequal item.Plan '' %} pas encore modifier {% else %} {{ item.Plan }} {% endifequal %}</td>
+            <td class='c12'>{% ifequal item.Format '' %} pas encore modifier {% else %}  {{ item.Format }} {% endifequal %}</td>
+            <td class='c12'>{% ifequal item.Ressource '' %} pas encore modifier {% else %} {{ item.Ressource }} {% endifequal %}</td>
+            <td class='c12'>{% ifequal item.Evaluation '' %} pas encore modifier {% else %} {{ item.Evaluation }} {% endifequal %}</td>
+            <td class='c12'><a href="{% url 'gestionCours:admin_Show_CV_Cours' %}?id={{item.id}}" target="_blank"> voir {{item.Titre}}</a></td>
+
+		   {% else  %}
+		    <tr >
+            <td class='c20'>{{ item.id }}</td>
+		   <td class='c2'>{{ item.IDcours }}</td>
+          <td class='c22'>{{ item.IDprogramme}}</td>
+          <td class='c22'>{{ item.Titre }}</td>
+          <td class='c22'>{{ item.IDprofesseur }} et <a href="{% url 'gestionCours:admin_Show_CV_professeur' %}?id={{item.IDprofesseur.id}}" target="_blank">Lien vers CV</a> </td>
+           <td class='c22'>{{ item.PubliqueCible }}</td>
+            <td class='c22'>{%for prek in item.Prerequis.all %} <a href="{% url 'gestionCours:admin_Show_CV_Cours' %}?id={{prek.id}}" target="_blank">{{prek}} </a>{% empty %} pas de prerequis  {% endfor %}</td>
+           <td class='c22'>{% ifequal item.Objectif '' %} pas encore modifier {% else %} {{ item.Objectif}} {% endifequal %}</td>
+           <td class='c22'>{% ifequal item.Description '' %} pas encore modifier {% else %} {{ item.Description }} {% endifequal %}</td>
+           <td class='c22'>{% ifequal item.Plan '' %} pas encore modifier {% else %} {{ item.Plan }} {% endifequal %}</td>
+            <td class='c22'>{% ifequal  item.Format '' %} pas encore modifier {% else %} {{ item.Format }} {% endifequal %}</td>
+            <td class='c22'>{% ifequal item.Ressource '' %} pas encore modifier {% else %} {{ item.Ressource }} {% endifequal %}</td>
+            <td class='c22'>{% ifequal item.Evaluation '' %} pas encore modifier {% else %} {{ item.Evaluation }} {% endifequal %}</td>
+             <td class='c22'><a href="{% url 'gestionCours:admin_Show_CV_Cours' %}?id={{item.id}}" target="_blank"> voir {{item.Titre}}</a> </td>
+
+             </tr>
+            {% endif %}
+
+
+        {% empty %}
+            <P>Pas de Nom Cours</P>
+        {% endfor %}
+
+	   	  </table>
+
+	   </div>
+
+
+
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+

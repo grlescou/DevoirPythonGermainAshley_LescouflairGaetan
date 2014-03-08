@@ -1,0 +1,81 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Etablissement{% endblock %}
+
+
+    {% block content-title %}
+<h2>   Supression d'etablissements </h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+
+     <div id="listing-content">
+
+
+
+
+      <div>
+   <form action="{% url 'gestionCours:admin_supression_Programme_getInfo' %}" method="get">
+<label>Selectionner  a supprimer:</label>
+  <select name="ids">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.Domaine}}-{{item.Mention}}-{{item.Specialite}}-{{item.TypeCours}}-{{item.Langue}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+
+</select>
+ <input type="submit" value="Chercher">
+
+</form>
+
+    <div>
+
+       {% if Et2 %}
+
+        <form action="{% url 'gestionCours:admin_supression_Programme_Update' %}" method="get">
+   <h4>Programme a modifier:</h4>
+       <p>Programme :{{Et2.Domaine}}-{{Et2.Mention}}-{{Et2.Specialite}}-{{Et2.TypeCours}}-{{Et2.Langue}}</p>
+
+
+        <button type="submit" name="id" value="{{Et2.id}}" >Supprimer</button>
+        <button type="submit" name="annuler" value="annuler" >Annuler</button>
+
+
+</form>
+
+        {% else %}
+
+        {% endif %}
+
+<p>{{succes}}</p>
+    </div>
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+

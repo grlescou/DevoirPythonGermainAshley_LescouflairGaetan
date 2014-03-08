@@ -1,0 +1,96 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | listing Nom Cours {% endblock %}
+
+
+    {% block content-title %}
+<h2>   List des Nom Cours </h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+
+  <div id="listing-content">
+
+
+
+
+   <div id="tableW" >
+ <table class='tableH'  align='center'>
+<tr >
+<th  class='tablehead'>ID</th>
+<th  class='tablehead'>Etablissement </th>
+<th  class='tablehead'>Grade</th>
+<th  class='tablehead'>Semestre</th>
+<th  class='tablehead'>Nom</th>
+</tr>
+
+
+     {% if item_listNcours %}
+     <p>list cours existe</p>
+      {% endif  %}
+       {% if item_listEt %}
+     <p>list Etablissement existe</p>
+      {% endif  %}
+
+
+
+
+
+        {% for item in item_listNcours %}
+
+
+
+
+
+		 {% if forloop.counter|divisibleby:"2" %}
+
+		   <tr >
+            <td class='c10'>{{ item.id }}</td>
+		   <td class='c1'>{{ item.CodeEtablissement.Nom }}</td>
+          <td class='c12'>{{ item.Grade }}</td>
+          <td class='c12'>{{ item.Semestre }}</td>
+          <td class='c12'>{{ item.Nom }}</td>
+
+		   {% else  %}
+		    <tr >
+            <td class='c20'>{{ item.id }}</td>
+			<td class='c2'>{{  item.CodeEtablissement.Nom }}</td>
+             <td class='c22'>{{ item.Grade }}</td>
+            <td class='c22'>{{ item.Semestre }}</td>
+            <td class='c22'>{{ item.Nom }}</td>
+
+
+             </tr>
+            {% endif %}
+
+
+        {% empty %}
+            <P>Pas de Nom Cours</P>
+        {% endfor %}
+
+	   	  </table>
+
+	   </div>
+
+
+
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+

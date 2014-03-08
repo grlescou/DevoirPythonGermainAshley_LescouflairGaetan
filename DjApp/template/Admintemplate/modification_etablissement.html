@@ -1,0 +1,89 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Modification | Etablissement {% endblock %}
+
+
+    {% block content-title %}
+     <h2> Modification etablissement</h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+
+  <div id="listing-content">
+
+
+      <div>
+   <form action="{% url 'gestionCours:admin_modification_getInfo' %}" method="get">
+<label>Selectionner  pour modifier:</label>
+  <select name="ids">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.Nom}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+
+</select>
+ <input type="submit" value="Chercher">
+
+</form>
+
+
+
+
+
+<div>
+
+       {% if Et2 %}
+
+  <form id="update-form" action="{% url 'gestionCours:admin_modification_Update' %}" method="get">
+     <fieldset id="update-principal">
+    <h4>Etablissement a modifier:</h4>
+       <p>Nom :{{Et2.Nom}}</p>
+       <p>Lieu :{{Et2.Lieu}}</p>
+  <fieldset id="update-field">
+        <label>Nom :</label><input type="text" name="nom" value="{{Et2.Nom}}">
+        <label>Lieu:</label><input type="text" name="lieu" value="{{Et2.Lieu}}">
+        <button type="submit" name="id" value="{{Et2.id}}" >Modifier</button>
+        <button type="submit" name="annuler" value="annuler" >Annuler</button>
+   </fieldset>
+
+
+         </fieldset>
+</form>
+
+        {% else %}
+
+        {% endif %}
+
+<p>{{succes}}</p>
+    </div>
+
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+

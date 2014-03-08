@@ -1,0 +1,115 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Modification | Etablissement {% endblock %}
+
+
+    {% block content-title %}
+     <h2> Modification Nom Cours</h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+
+  <div id="listing-content">
+
+
+      <div>
+   <form action="{% url 'gestionCours:admin_modification_NomCours_getInfo' %}" method="get">
+<label>Selectionner  pour modifier:</label>
+  <select name="ids">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.CodeEtablissement.Nom}}-{{item.Grade}}{{item.Semestre}}-{{item.Nom}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+
+</select>
+ <input type="submit" value="Chercher">
+
+</form>
+
+
+
+
+
+<div>
+
+       {% if Et2 %}
+
+  <form id="update-form" action="{% url 'gestionCours:admin_modification_NomCours_Update' %}" method="get">
+     <fieldset id="update-principal">
+    <h4>Nom Cours a modifier:</h4>
+       <p>Nom Cours :{{Et2.CodeEtablissement.Nom}}-{{Et2.Grade}}{{Et2.Semestre}}-{{Et2.Nom}}</p>
+
+  <fieldset id="update-field">
+      <label for="Etablissement" id="lab1">Etablissement :</label><select class="select_NC" name="Etablissement">
+      {% for item in item_listEt %}
+      <option value="{{item.id}}">{{item.Nom}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+</select><br>
+
+
+ <label for="Grade" id="lab1">Grade :</label><select class="select_NC" name="Grade">
+      <option value="Propedeutique">Propedeutique</option>
+      <option value="L1">L1</option>
+      <option value="L2">L2</option>
+      <option value="L3">L3</option>
+     <option value="M1">M1</option>
+     <option value="M2">M2</option>
+</select>
+
+
+ <label for="Semestre" id="lab2">Semestre :</label><select class="select_NC" name="Semestre">
+      <option value="S1">S1</option>
+      <option value="S2">S2</option>
+      <option value="Y">Y</option>
+</select>
+
+<label for="nom" id="lab2">Nom :</label><input class="textfield" type="text" name="nom" value="{{Et2.Nom}}"><br>
+
+        <button type="submit" name="id" value="{{Et2.id}}" >Modifier</button>
+        <button type="submit" name="annuler" value="annuler" >Annuler</button>
+   </fieldset>
+
+
+         </fieldset>
+</form>
+
+        {% else %}
+
+        {% endif %}
+
+<p>{{succes}}</p>
+    </div>
+
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+

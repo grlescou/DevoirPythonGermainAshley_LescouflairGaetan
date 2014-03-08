@@ -1,0 +1,59 @@
+{% extends "MAster.html" %}
+
+{% block title %} Donnee{% endblock %}
+
+ {% block content %}
+
+ <h2> donnee sur etablissement  </h2>
+
+
+<div>
+   <form action="{% url 'gestionCours:Esupp' %}" method="get">
+<label>Selectionner  a supprimer:</label>
+  <select name="ids">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.Nom}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+
+</select>
+ <input type="submit" value="Chercher">
+
+</form>
+
+    <div>
+
+       {% if Et %}
+
+        <form action="{% url 'gestionCours:Esuppnow' %}" method="get">
+    <label>Etablissement a supprimer:</label>
+       <br>
+       <p>Nom :{{Et.Nom}}</p>
+       <p>Lieu :{{Et.Lieu}}</p>
+
+        <button type="submit" name="id" value="{{Et.id}}" >Supprimer</button>
+
+
+</form>
+
+        {% else %}
+
+        {% endif %}
+
+<p>{{succes}}</p>
+    </div>
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+ {% endblock %}
+
+

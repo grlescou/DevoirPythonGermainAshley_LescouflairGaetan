@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+     {% load staticfiles %}
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/head.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% block css %}     {% endblock %}
+    <title>{% block title %}Master{% endblock %}</title>
+</head>
+<body>
+
+<div id="head-content">
+ {% load staticfiles %}
+<div> <img src="{% static 'images/esih.jpg' %}" id="logo"></div>
+
+<nav id="menu-content">
+<ul id="menu">
+
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Listing  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_listing_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+        </li>
+
+        <li><a href="#">Enregistrement &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+
+        </li>
+
+        <li><a href="#">Modification  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_modification_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+
+        </li>
+
+
+        <li><a href="#">Suppression  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_supression_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+
+
+
+
+        </li>
+</ul>
+
+</nav>
+
+
+</div>
+<div id="corps">
+    <div id="content-title">
+
+    {% block content-title %}
+
+    {% endblock %}
+    </div>
+
+
+ {% block content %}
+
+
+
+    {% endblock %}
+
+
+</div>
+
+<div id="footer">
+
+<hr>
+<h6>site de gestion de description de scours...</h6>
+
+
+</div>
+
+
+</body>
+</html>

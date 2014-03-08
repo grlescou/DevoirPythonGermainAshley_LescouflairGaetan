@@ -1,0 +1,67 @@
+* {
+	margin:0;
+	padding: 0;
+}
+
+#logo{
+	position:absolute;
+	top: 40px;
+	left:40px;
+	height: 170px;
+	width:250px;
+	border-right:solid 5px blue;
+	border-top:solid 5px gray;	
+	border-left:solid 5px blue;
+	border-bottom:solid 5px blue;
+}
+#head-content{
+height: 19.7%;
+background-color: black;
+
+border-bottom:solid 5px blue;		
+}
+
+#content-title{
+	position:absolute;
+	background-color: black;
+	color: white;
+	left: 25.3%;
+	top: 265px;
+	padding: 5px;
+	
+}
+
+
+
+#menu-content {
+position:absolute;	
+top: 135px;
+right:50px;	
+width: 60%;
+}
+
+html, body {
+    height:100%;
+    min-height:100%;
+}
+
+
+#corps{
+	height: 72%;
+	
+}
+
+
+#footer{
+border-top:solid 3px blue;	
+background-color: black;	
+height: 7%;
+color: white;
+}
+
+
+
+
+
+
+

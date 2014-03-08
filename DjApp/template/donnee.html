@@ -1,0 +1,41 @@
+{% extends "MAster.html" %}
+
+{% block title %} Donnee{% endblock %}
+
+ {% block content %}
+
+ <h2> donnee sur etablissement  </h2>
+
+
+<div>
+   <form action="{% url 'gestionCours:donnee1' %}" method="get">
+<label>Rechercher par nom:</label><input type="text" name="nom" >
+ <input type="submit" value="Chercher">
+
+</form>
+
+    <div>
+
+        <ul>
+        {% for item in item_list %}
+             <li>{{ item.Nom }}</li>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+        </ul>
+
+
+    </div>
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+ {% endblock %}
+
+

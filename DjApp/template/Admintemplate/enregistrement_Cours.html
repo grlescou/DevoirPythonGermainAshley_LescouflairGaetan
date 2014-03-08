@@ -1,0 +1,115 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_NomCours.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Nom Cours{% endblock %}
+
+
+    {% block content-title %}
+<h2>Formulaire d'enregistrement de Nom Cours</h2>
+
+    {% endblock %}
+
+ {% block content %}
+
+
+
+  <div id="listing-content">
+
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_enregistrer_NomCours_form' %}" method="get">
+
+<fieldset id="field-enr">
+
+<label for="IDcours" id="lab1">IDcours:</label><select class="select_NC" name="IDcours">
+      {% for item in list_IDcours %}
+      <option value="{{item.id}}">{{item.CodeEtablissement.Nom}}-{{item.Grade}}{{item.Semestre}}-{{item.Nom}}</option>
+        {% empty %}
+            <P>Pas de IDcours</P>
+        {% endfor %}
+
+</select> <br>
+
+
+ <label for="IDprogramme" id="lab1">IDprogramme</label><select class="select_NC" name="IDprogramme">
+       {% for item2 in list_IDprogramme %}
+      <option value="{{item2.id}}">{{item2.Domaine}}-{{item2.Mention}}-{{item2.Specialite}}-{{item2.TypeCours}}-{{item2.Langue}}</option>
+        {% empty %}
+            <P>Pas de IDcours</P>
+        {% endfor %}
+</select><br>
+
+
+    <label for="Titre" id="lab1">Titre</label><select class="select_NC" name="Titre">
+      {% for item3 in list_IDcours2 %}
+      <option value="{{item3.Nom}}">{{item3.Nom}}</option>
+        {% empty %}
+            <P>Pas de Titre</P>
+        {% endfor %}
+
+</select> <br>
+
+<label for="Credits" id="lab2">Credits</label><input class="textfield" type="text" name="Credits" required ><br>
+
+
+<label for="IDprofesseur" id="lab1">IDprofesseur</label><select class="select_NC" name="IDprofesseur">
+       {% for item4 in list_IDprofesseur %}
+      <option value="{{item4.id}}">{{item4.Prenom}} {{item4.Nom}} -No Identite :{{item4.NoIndentite}}</option>
+        {% empty %}
+            <P>Pas de IDprofesseur</P>
+        {% endfor %}
+</select><br>
+
+
+ <label for="PubliqueCible" id="lab2">Publique Cible</label><select class="select_NC" name="PubliqueCible" multiple>
+      <option value="Etudiants">Etudiants</option>
+      <option value="Professionnels">Professionnels</option>
+      <option value="Autres">Autres</option>
+</select><br>
+
+
+
+    <label for="Prerequis" id="lab1">Prerequis</label><select class="select_NC" name="Prerequis" multiple>
+       {% for item5 in list_Cours %}
+      <option value="{{item5.id}}">{{item5.Nom}}</option>
+        {% empty %}
+          <option value="none">Pas de cours</option>
+        {% endfor %}
+</select><br>
+
+
+<!-- <label for="nom" id="lab2">Nom :</label><input class="textfield" type="text" name="nom"><br> -->
+
+
+<label for="Objectif" class="lab3">Objectif</label><br><textarea class="textArea" name="Objectif" rows="10"   required placeholder="Objectif du Cours"></textarea><br>
+<label for="Description" class="lab3">Objectif</label><br><textarea class="textArea" name="Description" rows="10"   required placeholder="Description"></textarea><br>
+<label for="Plan" class="lab3">Plan</label><br><textarea class="textArea" name="Plan" rows="10"   required placeholder="Plan du Cours"></textarea><br>
+<label for="Format" class="lab3">Format</label><br><textarea class="textArea" name="Format" rows="10"   required placeholder="Format du Cours"></textarea><br>
+<label for="Ressource" class="lab3">Ressource</label><br><textarea class="textArea" name="Ressource" rows="10"   required placeholder="Ressource"></textarea><br>
+<label for="Evaluation" class="lab3">Evaluation</label><br><textarea class="textArea" name="Evaluation" rows="10"   required placeholder="Evaluation"></textarea><br>
+
+
+
+
+
+
+ <input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p> {{reponse}}</p>
+
+
+
+
+
+        </div>
+
+
+    {% endblock %}
+
+
