@@ -41,15 +41,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Listing_Cours.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/Listing_Cours.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="32" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1938">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="esih4.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjApp/template/esih4.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,10 +61,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Accueil.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Accueil.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjApp/template/Proftemplate/Accueil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="17" selection-start="18" selection-end="18" vertical-scroll-proportion="0.025411062" vertical-offset="0" max-vertical-offset="669">
+            <state line="1" column="17" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="442">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enregistrement_Cours.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Cours.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2057">
               <folding />
             </state>
           </provider>
@@ -88,33 +88,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjApp/urls.py">
+      <file leaf-file-name="enregistrement_Cours2.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Cours2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prof/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prof/views.py">
+      <file leaf-file-name="enregistrement_NomCours.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_NomCours.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="35" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1309">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enregistrement_Professeur.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Professeur.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="50" selection-start="3233" selection-end="3233" vertical-scroll-proportion="0.696063" vertical-offset="646" max-vertical-offset="1530">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DjApp/template/Admintemplate/supression_Cours.html" />
         <option value="$PROJECT_DIR$/DjApp/template/AdminMaster.html" />
         <option value="$PROJECT_DIR$/DjApp/models.py" />
         <option value="$PROJECT_DIR$/DjApp/template/Admintemplate/cours.html" />
@@ -145,6 +140,7 @@
         <option value="$PROJECT_DIR$/DjApp/template/Admintemplate/ProfM.html" />
         <option value="$PROJECT_DIR$/DjApp/template/ProfM.html" />
         <option value="$PROJECT_DIR$/DjApp/template/Proftemplate/Accueil.html" />
+        <option value="$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Professeur.html" />
       </list>
     </option>
   </component>
@@ -607,34 +603,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gestionCours/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="40" selection-start="7352" selection-end="7352" vertical-scroll-proportion="0.0" vertical-offset="1179" max-vertical-offset="1853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/adminG.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="32" selection-start="0" selection-end="32" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/MAster.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="197" selection-end="227" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/Proftemplate/modification_Cours.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="1.7307693" vertical-offset="45" max-vertical-offset="1598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DjApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="21" selection-start="2625" selection-end="2640" vertical-scroll-proportion="0.0" vertical-offset="924" max-vertical-offset="1598">
@@ -720,7 +688,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DjApp/template/Proftemplate/Accueil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="17" selection-start="18" selection-end="18" vertical-scroll-proportion="0.025411062" vertical-offset="0" max-vertical-offset="669">
+        <state line="1" column="17" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Cours.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Cours2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_NomCours.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Professeur.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="50" selection-start="3233" selection-end="3233" vertical-scroll-proportion="0.696063" vertical-offset="646" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
