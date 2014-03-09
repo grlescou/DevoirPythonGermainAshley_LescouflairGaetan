@@ -7,6 +7,25 @@
     <title>CV | Professeur </title>
 </head>
 <body>
+<script language="javascript">
+function printdiv(printpage, css)
+{
+var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' media='print'/></head><body>";
+   html+= document.getElementById(printpage).innerHTML;
+
+   html+="</body></html>";
+
+   var printWin = window.open('','','left=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,status  =0');
+   printWin.document.write(html);
+   printWin.document.close();
+   printWin.focus();
+   printWin.print();
+   printWin.close();
+
+}
+</script>
+<div>  {% load staticfiles %}<input name="b_print" type="button" class="ipt"   onClick="printdiv('content_cv','{% static 'css/cv.css' %}');" value=" Print CV "></div>
+
 
 <div id="content_cv">
  {% if  item %}
