@@ -11,16 +11,18 @@
 <script language="javascript">
 function printdiv(printpage)
 {
-var head = document.head.innerHTML;
-var headstr = "<html>"+head+"<body>";
-var footstr = "</body>";
-var newstr = document.all.item(printpage).innerHTML;
-var oldstr = document.body.innerHTML;
+var html="<html><head>{% load staticfiles %}<link href='{% static 'css/cv.css' %}' rel='stylesheet' type='text/css' media='screen'/></head><body>";
+   html+= document.getElementById(printpage).innerHTML;
 
-document.body.innerHTML = headstr+newstr+footstr;
-window.print();
-document.body.innerHTML = oldstr;
-return false;
+   html+="</body></html>";
+
+   var printWin = window.open('','','left=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,status  =0');
+   printWin.document.write(html);
+   printWin.document.close();
+   printWin.focus();
+   printWin.print();
+   printWin.close();
+
 }
 </script>
 <div><input name="b_print" type="button" class="ipt"   onClick="printdiv('content_cv');" value=" Print CV "></div>
