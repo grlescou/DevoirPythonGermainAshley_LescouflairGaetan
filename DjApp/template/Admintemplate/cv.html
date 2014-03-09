@@ -17,8 +17,8 @@
     function Popup(data)
     {
         var mywindow = window.open('', 'my div', 'height=400,width=600');
-        mywindow.document.write('<html><head><title>my div</title>');
-        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('<html><head><title>CV Professeur</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="cv.css" type="text/css" />');
         mywindow.document.write('</head><body >');
         mywindow.document.write(data);
         mywindow.document.write('</body></html>');
@@ -30,7 +30,7 @@
     }
 
 </script>
-<input type="button" value="Print Div" onclick="PrintElem('#content_cv')" />
+<input type="button" value="Print CV" onclick="PrintElem('#content_cv')" />
 <div id="content_cv">
  {% if  prof %}
 
