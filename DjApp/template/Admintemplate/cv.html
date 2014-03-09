@@ -2,7 +2,7 @@
 <html>
 <head>
     {% load staticfiles %}
-    <link href="{% static 'css/cv.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/cv.css' %}" rel="stylesheet" type="text/css" media="screen,print"/>
 
     <title>CV | Professeur </title>
 </head>
@@ -11,7 +11,7 @@
 <script language="javascript">
 function printdiv(printpage)
 {
-var html="<html><head>{% load staticfiles %}<link href='{% static 'css/cv.css' %}' rel='stylesheet' type='text/css' media='screen'/></head><body>";
+var html="<html><head>{% load staticfiles %}<link href='{% static 'css/cv.css' %}' rel='stylesheet' type='text/css' media='print'/></head><body>";
    html+= document.getElementById(printpage).innerHTML;
 
    html+="</body></html>";
