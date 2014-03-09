@@ -11,7 +11,7 @@
 <script language="javascript">
 function printdiv(printpage, css)
 {
-var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' media='print'/></head><body>";
+var html="<html><head>"+css+"</head><body>";
    html+= document.getElementById(printpage).innerHTML;
 
    html+="</body></html>";
@@ -25,7 +25,7 @@ var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' medi
 
 }
 </script>
-<div><input name="b_print" type="button" class="ipt"   onClick="javascript:window.print();" value=" Print CV "></div>
+<div>  {% load staticfiles %}<input name="b_print" type="button" class="ipt"   onClick="printdiv('content_cv','<link href='{% static 'css/cv.css' %}' rel='stylesheet' type='text/css' media='print'/>');" value=" Print CV "></div>
 
 <div id="content_cv">
 
