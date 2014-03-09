@@ -25,7 +25,7 @@ var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' medi
 
 }
 </script>
-<div>  {% load staticfiles %}<input name="b_print" type="button" class="ipt"   onClick="printdiv('content_cv','{% static 'css/cv.css' %}');" value=" Print CV "></div>
+<div><input name="b_print" type="button" class="ipt"   onClick="javascript:window.print();" value=" Print CV "></div>
 
 <div id="content_cv">
 
