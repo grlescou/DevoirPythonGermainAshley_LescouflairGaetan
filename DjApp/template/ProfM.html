@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<meat charset="utf-8"/>
+<head>
+     {% load staticfiles %}
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/default.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/Style.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% block css %}     {% endblock %}
+    <title>{% block title %}Prof master{% endblock %}</title>
+</head>
+<body>
+
+ {% load staticfiles %}
+<!--<div> <img src="{% static 'images/esih.jpg' %}" id="logo"></div> -->
+
+
+
+<div class="page-container">
+<div id="form1" >
+<header>
+<h1 class="logo">Plateforme de description cours</h1>
+</header>
+
+
+<div class="body-container">
+<div id="position-menu">
+
+        </div>
+ <div id="login-position">
+
+ <div id="content-log-menu" >
+
+
+    <div id="log-info">
+  <a href="{% url 'Prof:logout' %}">Logout</a>
+  </div>
+
+<div id="menu-div">
+<nav id="menu-content">
+<ul id="menu">
+
+        <li><a href="{% url 'Prof:prof'  %}">Accueil</a></li>
+        <li><a href="{% url 'Prof:prof_listing_Cours'  %}" >Mes Cours</a>
+
+
+        <li><a href="{% url 'Prof:prof_Show_CV_professeur'  %}" target="_blank" >Mon CV </a></li>
+
+        <li><a href="{% url 'Prof:modif'  %}">Modification Mes cours </a></li>
+
+</ul>
+</nav>
+      </div>
+</div>
+
+
+
+ </div>
+<div class="body-container-titles">
+Professeur
+
+</div>
+
+
+
+
+  <!--  <div id="cadran" > -->
+
+
+       <div class="line2"></div>
+
+    <div id="content-title2" >
+      <h3>  {% block content-title %}Projet :[-------------]{% endblock %}
+      </h3>
+           </div>
+
+
+
+             <div>
+			 {% block workon %} {% endblock %}
+
+                 </div>
+            <div id="info-content">
+
+                <div id="grid-content">
+                    <table>
+                        <tr>
+                            <td>
+             <div id="bouton">
+			 {% block upbouton %} {% endblock %}
+
+         </div>
+                                </td>
+             </tr>
+        <tr>
+            <td>
+			{% block content %} {% endblock %}
+
+                  </td>
+                </tr>
+           </table>
+                     </div>
+         </div>
+   <!-- </div> -->
+
+
+
+
+
+
+</div>
+
+<footer>
+<h5>&copy;2014 Plateforme de description cours-ESIH, All Rights Reserved. | Contactez-Nous</h5>
+</footer>
+
+
+</div>
+</div>
+
+
+
+</body>
+</html>

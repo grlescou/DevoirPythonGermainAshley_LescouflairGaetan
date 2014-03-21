@@ -1,0 +1,83 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_NomCours.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Nom Cours{% endblock %}
+
+
+    {% block content-title %}
+Formulaire d'enregistrement de Nom Cours
+
+    {% endblock %}
+
+
+        {% block workon %} {% endblock %}
+
+    {% block upbouton %} {% endblock %}
+
+ {% block content %}
+
+
+
+
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_enregistrer_Programme_form' %}" method="get">
+
+<fieldset id="field-enr">
+
+
+ <label for="Domaine" id="lab1">Domaine :</label><select class="select_NC" name="Domaine">
+      <option value="ST">S&T-Science et Technologie</option>
+      <option value="E&G">E&G-Economie et Gestion</option>
+
+</select><br>
+<label for="Mention" id="lab1">Mention :</label><select class="select_NC" name="Mention">
+      <option value="SI">SI-Science Informatique</option>
+      <option value="E&G">E&G-Economie et Gestion</option>
+
+</select><br>
+
+
+ <label for="Specialite" id="lab2">Specialite :</label><select class="select_NC" name="Specialite">
+    <option value="TEL">TEL-Telecommication</option>
+     <option value="BDD">BDD-Base de donnees</option>
+     <option value="ONE">ONE-Organisation de la Net Economie</option>
+     <option value="SdE">SdE-Science de l'Entreprise</option>
+     <option value="SC">SC-Science Compatable</option>
+     <option value="S2">S2</option>
+     <option value="Y">Y</option>
+</select><br>
+
+<label for="Type" id="lab1">Type Cours :</label><select class="select_NC" name="Type">
+      <option value="Ob">Ob-Obligatoire</option>
+      <option value="Op">Op-Optionnel</option>
+
+</select><br>
+
+<label for="Langue" id="lab1">Langue :</label><select class="select_NC" name="Langue">
+      <option value="Creole">Creole</option>
+      <option value="Francais">Francais</option>
+      <option value="Anglais">Anglais</option>
+
+</select><br>
+
+ <input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p> {{reponse}}</p>
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+

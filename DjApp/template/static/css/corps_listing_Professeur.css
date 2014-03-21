@@ -1,0 +1,211 @@
+#listing-content{
+	
+	border: solid 3px blue;
+	height: 40%;
+	position: absolute;
+	top: 300px;
+	width:70%;
+	right: 70px;
+	
+	overflow-y: scroll;
+	
+}
+
+#tableTitle{
+	background-color: black;
+	color: blue;
+	
+}
+
+
+#tableW{
+float: top;
+margin-top: 10px;
+}
+
+table.tableH{
+border:1px solid #F0F8FF;
+}
+
+th.tablehead{
+--border:1px solid white;
+background-color: #303030;
+color: white;
+height:30px;
+}
+
+td.c1{
+	min-width: 200px;
+--border:1px solid black;
+background-color: #F0F8FF;
+height:24px;
+}
+
+td.c12{
+	min-width: 400px;
+--border:1px solid black;
+background-color: #F0F8FF;
+height:24px;
+}
+
+
+td.c2{
+--border:1px solid black;
+min-width: 200px;
+background-color: #E6E6FA;
+height:24px;
+}
+
+td.c22{
+--border:1px solid black;
+min-width: 400px;
+background-color: #E6E6FA;
+height:24px;
+}
+
+
+
+td.c10{
+	min-width: 60px;
+--border:1px solid black;
+background-color: #F0F8FF;
+height:24px;
+}
+
+td.c20{
+--border:1px solid black;
+min-width: 60px;
+background-color: #E6E6FA;
+eight:24px;
+
+}
+
+
+#field-enr {
+	
+border:0;
+width: 90%;
+margin-left:30px;
+margin-top:30px;
+padding: 15px;	
+	
+}
+
+
+#form-enr .textfield {
+position:relative;
+left: 50px;
+
+margin : 5px;
+border:solid 1px gray ;
+ width:25%;
+ height: 25px;
+
+}
+
+#form-enr .sub {
+position:relative;
+margin: 5px;	
+width: 100px;
+height: 30px;
+left: 260px;
+}
+
+
+#form-enr .lab2  {
+display: inline-block;
+
+color: rgb(64, 92, 96);
+ 
+width: 100px;
+margin : 5px;
+}
+
+.lab3 {
+color: rgb(64, 92, 96);
+width: 250px;
+margin-top : 5px;	
+}
+
+.textArea {
+
+margin : 15px;
+border:solid 1px gray ;
+ width:70%;
+ height: 10%;
+ 
+  max-width:70%;
+ max-height: 10%;
+ 
+}
+
+#form-enr .select_NC{
+position:relative;
+left: 50px;
+
+margin : 5px;
+border:solid 1px gray ;
+width:25%;
+height: 30px;
+margin: 5px;
+	
+}
+
+
+
+#update-form h4 {
+	background-color:black;
+	width: 80%;
+	color: red;
+}
+
+#update-form  p{
+	
+	
+}
+
+#update-form  label{
+	display: inline-block;
+
+ color: rgb(64, 92, 96);
+
+width: 50px;
+margin : 5px;
+	
+}
+
+#update-form  input{
+	
+width: 200px;
+margin : 5px;
+	
+}
+
+
+
+
+#update-form  button{
+	
+	width: 70px;
+	height: 22px;
+}
+
+
+
+#update-field{
+	margin-top: 25px;
+	border: solid 1px gray;
+	width: 80%;
+	float: left;
+	background-color: white;
+}
+
+
+#update-principal{
+	
+border:0;
+width: 90%;
+margin-left:30px;
+margin-top:30px;
+padding: 15px;		
+}

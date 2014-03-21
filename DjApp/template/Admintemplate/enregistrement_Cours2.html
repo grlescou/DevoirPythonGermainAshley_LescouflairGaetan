@@ -1,0 +1,44 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_NomCours.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Nom Cours{% endblock %}
+
+
+
+
+
+
+     {% block content-title %}Formulaire d'enregistrement de Nom Cours{% endblock %}
+
+
+    {% block workon %} {% endblock %}
+
+    {% block upbouton" %} {% endblock %}
+
+    {% block content %}
+
+
+
+
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_enregistrer_Cours' %}" method="post">
+
+<fieldset id="field-enr">
+{% csrf_token %}
+{{ adminCours.as_p }}
+ <input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p> {{reponse}}</p>
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,138 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_Professeur.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <script src="{% static 'Jscript/ckeditorFull/ckeditor.js' %}"></script>
+    {% endblock %}
+
+
+   {% block title %}Modification | Etablissement {% endblock %}
+
+
+    {% block content-title %}
+      Modification Nom Cours
+
+    {% endblock %}
+
+         {% block workon %} {% endblock %}
+
+    {% block upbouton %} {% endblock %}
+
+ {% block content %}
+
+ <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+              function editeur(id_textarea)
+            {
+                CKEDITOR.replace( id_textarea);
+            }
+  </script>
+
+
+
+
+
+
+      <div>
+   <form action="{% url 'gestionCours:admin_modification_Professeur_getInfo' %}" method="get">
+<label>Selectionner  pour modifier:</label>
+  <select name="ids">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.Prenom}} {{item.Nom}} -No Identite :{{item.NoIndentite}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+
+</select>
+ <input type="submit" value="Chercher">
+
+</form>
+
+
+
+
+
+<div>
+
+       {% if Et2 %}
+
+  <form id="update-form" action="{% url 'gestionCours:admin_modification_Professeur_Update' %}" method="get">
+     <fieldset id="update-principal">
+    <h4>Professeur a modifier:</h4>
+       <p>Professeur :{{Et2.Prenom}} {{Et2.Nom}} -No Identite :{{Et2.NoIndentite}}</p>
+
+
+      <fieldset id="field-enr" >
+
+    <label for="nom" class="lab2">Nom :</label><input class="textfield" type="text" name="nom" value="{{Et2.Nom}}" required><br>
+    <label for="prenom" class="lab2">Prenom :</label><input class="textfield" type="text" name="prenom" value="{{Et2.Prenom}}" required><br>
+    <label for="NoId" class="lab2">No Identite :</label><input class="textfield" type="text" name="NoId"  value="{{Et2.NoIndentite}}" required><br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <h3>CV</h3>
+    <br>
+    <label for="AdresseProfessionnelle" class="lab2">Adresse professionnelle :</label><input class="textfield" type="text" name="ad_prof" value="{{Et2.CV.ad_prof}}" required><br>
+    <label for="SituationActuelle" class="lab2">Situation actuelle :</label><input class="textfield" type="text" name="sit_act" value="{{Et2.CV.sit_act}}" required><br>
+    <label for="Etablissement" class="lab2">Etablissement :</label><input class="textfield" type="text" name="etablissement"  value="{{Et2.CV.etablissement}}" required><br>
+     <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <label for="EmploiActuel" class="lab3">Emploie actuel:</label><br><textarea id="EmploiActuel"  name="EmploiActuel" rows="10"   required>{{Et2.CV.EmploiActuel}}</textarea><br>
+    <script> editeur("EmploiActuel") </script>
+    <label for="Formation" class="lab3">Formation / Titre Universitaire:</label><br><textarea id="Formation" name="Formation" rows="10"   required>{{Et2.CV.Formation}}</textarea><br>
+    <script> editeur("Formation") </script>
+    <label for="EmploisPrecedents" class="lab3">Emplois Precedents :</label><br><textarea id="EmploisPrecedents" name="EmploisPrecedents" rows="10"   required>{{Et2.CV.EmploisPrecedents}}</textarea><br>
+    <script> editeur("EmploisPrecedents") </script>
+    <label for="Experiencesdenseignement" class="lab3">Experiences d'enseignement :</label><br><textarea id="Experiencesdenseignement" name="Experiencesdenseignement" rows="10"   required>{{Et2.CV.Experiencesdenseignement}}</textarea><br>
+   <script> editeur("Experiencesdenseignement") </script>
+    <label for="ExperienceProfessionnelle" class="lab3">Experience Professionnelle :</label><br><textarea id="ExperienceProfessionnelle" name="ExperienceProfessionnelle" rows="10"  required>{{Et2.CV.ExperienceProfessionnelle}}</textarea><br>
+    <script> editeur("ExperienceProfessionnelle") </script>
+    <label for="ResponsabiliteAdministrative" class="lab3">Responsabilite Administrative:</label><br><textarea id="ResponsabiliteAdministrative" name="ResponsabiliteAdministrative" rows="10"  required>{{Et2.CV.ResponsabiliteAdministrative}}</textarea><br>
+    <script> editeur("ResponsabiliteAdministrative") </script>
+
+
+
+
+
+
+   </fieldset>
+
+
+         </fieldset>
+
+        <button type="submit" name="id" value="{{Et2.id}}" >Modifier</button>
+        <button type="submit" name="annuler" value="annuler" >Annuler</button>
+</form>
+
+        {% else %}
+
+        {% endif %}
+
+<p>{{succes}}</p>
+    </div>
+
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+
+
+
+
+
+    {% endblock %}
+
+

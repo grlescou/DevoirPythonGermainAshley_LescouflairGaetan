@@ -1,0 +1,191 @@
+@media print /*--This is for Print--*/
+{
+*{	margin:0;
+	padding: 0;
+}
+
+#entete{
+	display:inline-block;
+	
+	height: 20px;
+	width:85%;
+	color: blue;
+	border-bottom: solid 1px blue;
+	border-top: solid 1px blue;
+}
+
+#header img {
+	height: 80px;
+	width: 80px;
+	
+}
+
+#image {
+	display:inline-block;
+	padding:2px;
+
+	width:80px;
+	height: 80px;
+	
+	
+}
+
+#header {
+	
+height: 60px;	
+}
+
+
+.lab_tete{
+
+width: 200px;
+color: blue;
+
+	
+}
+
+.info_tete{
+
+width: 400px;
+
+
+	
+}
+
+
+.lab_corps {
+	
+width: 400px;
+color: blue;
+	
+}
+
+.lab_corps hr {
+	
+width: 400px;
+border: solid 1px  blue;	
+}
+
+
+#content_cv{
+ width: 60%;
+ margin: auto;
+	
+}
+
+#separator {
+width: 80%;	
+margin: auto;
+border-bottom: solid 1px  blue;	
+	
+}
+
+.divcell {
+	
+	width: 88%;	
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	margin-bottom:15px;
+
+}
+
+}
+
+
+@media screen /*--This is for Print Preview Screen--*/
+{
+
+
+	*{	margin:0;
+	padding: 0;
+}
+
+#entete{
+	display:inline-block;
+	
+	height: 20px;
+	width:85%;
+	color: blue;
+	border-bottom: solid 1px blue;
+	border-top: solid 1px blue;
+}
+
+#header img {
+	height: 80px;
+	width: 80px;
+	
+}
+
+#image {
+	display:inline-block;
+	padding:2px;
+
+	width:80px;
+	height: 80px;
+	
+	
+}
+
+#header {
+	
+height: 60px;	
+}
+
+
+.lab_tete{
+
+width: 200px;
+color: blue;
+
+	
+}
+
+.info_tete{
+
+width: 400px;
+
+
+	
+}
+
+
+.lab_corps {
+	
+width: 400px;
+color: blue;
+	
+}
+
+.lab_corps hr {
+	
+width: 400px;
+border: solid 1px  blue;	
+}
+
+
+#content_cv{
+ width: 60%;
+ margin: auto;
+	
+}
+
+#separator {
+width: 80%;	
+margin: auto;
+border-bottom: solid 1px  blue;	
+	
+}
+
+.divcell {
+	
+	width: 88%;	
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	margin-bottom:15px;
+
+}
+
+}
+

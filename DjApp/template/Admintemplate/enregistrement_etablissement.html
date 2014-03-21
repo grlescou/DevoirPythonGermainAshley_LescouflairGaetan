@@ -1,0 +1,52 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Etablissement{% endblock %}
+
+
+
+
+    {% block content-title %}
+Formulaire d'enregistrement d'etablissements
+
+    {% endblock %}
+
+ {% block workon %} {% endblock %}
+
+  {% block upbouton %} {% endblock %}
+
+
+ {% block content %}
+
+
+
+
+
+
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_enregistrer_etablissement_form' %}" method="get">
+
+<fieldset id="field-enr">
+ <label for="nom" id="lab1">Nom :</label><input class="textfield" type="text" name="nom"><br>
+ <label for="lieu" id="lab2">Lieu:</label><input class="textfield" type="text" name="lieu"><br>
+ <input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p> {{reponse}}</p>
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+

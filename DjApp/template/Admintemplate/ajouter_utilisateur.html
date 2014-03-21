@@ -1,0 +1,62 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_NomCours.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Nom Cours{% endblock %}
+
+
+
+
+
+
+     {% block content-title %}Formulaire d'enregistrement de Nom Cours{% endblock %}
+
+
+    {% block workon %} {% endblock %}
+
+    {% block upbouton" %} {% endblock %}
+
+    {% block content %}
+
+
+
+
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_utilisateur_ajouter' %}" method="post">
+
+<fieldset id="field-enr">
+{% csrf_token %}
+     <label for="User" class="lab2">User :</label><input class="textfield" type="text" name="User" required><br>
+    <label for="Password" class="lab2">Password :</label><input class="textfield" type="password" name="Password" required><br>
+    <label for="PasswordC" class="lab2">Confirmer Password :</label><input class="textfield" type="password" name="PasswordC" required><br>
+    <label for="Status" id="lab1">Status</label><select class="select_NC" name="Status">
+    <option value="administration">Administration</option>
+    <option value="professeur">Professeur</option>
+</select> <br>
+   <label for="ids" id="lab1">Utilisateur</label><select class="select_NC" name="ids">
+    <option value="admin">Administration</option>
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.Nom}} {{item.Prenom}} </option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+</select> <br>
+
+
+
+ <input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p>{{success}}</p>
+
+
+
+{% endblock %}
+
+

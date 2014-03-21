@@ -1,0 +1,75 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_NomCours.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Nom Cours{% endblock %}
+
+
+    {% block content-title %}
+Formulaire d'enregistrement de Nom Cours
+
+    {% endblock %}
+
+         {% block workon %} {% endblock %}
+
+    {% block upbouton %} {% endblock %}
+
+ {% block content %}
+
+
+
+
+
+
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_enregistrer_NomCours_form' %}" method="get">
+
+<fieldset id="field-enr">
+
+<label for="Etablissement" id="lab1">Etablissement :</label><select class="select_NC" name="Etablissement">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.Nom}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+</select> <br>
+
+
+ <label for="Grade" id="lab1">Grade :</label><select class="select_NC" name="Grade">
+      <option value="Propedeutique">Propedeutique</option>
+      <option value="L1">L1</option>
+      <option value="L2">L2</option>
+      <option value="L3">L3</option>
+     <option value="M1">M1</option>
+     <option value="M2">M2</option>
+</select><br>
+
+
+ <label for="Semestre" id="lab2">Semestre :</label><select class="select_NC" name="Semestre">
+      <option value="S1">S1</option>
+      <option value="S2">S2</option>
+      <option value="Y">Y</option>
+</select><br>
+
+<label for="nom" id="lab2">Nom :</label><input class="textfield" type="text" name="nom"><br>
+ <input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p> {{reponse}}</p>
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+

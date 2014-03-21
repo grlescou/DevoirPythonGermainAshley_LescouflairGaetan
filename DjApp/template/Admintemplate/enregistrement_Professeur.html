@@ -1,0 +1,88 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_Professeur.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <script src="{% static 'Jscript/ckeditorFull/ckeditor.js' %}"></script>
+    {% endblock %}
+
+
+   {% block title %}Admin | Enregistrement Professeur{% endblock %}
+
+
+    {% block content-title %}
+Formulaire d'enregistrement de Professeur
+
+    {% endblock %}
+
+        {% block workon %} {% endblock %}
+
+    {% block upbouton %} {% endblock %}
+
+ {% block content %}
+
+
+
+
+
+   <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+              function editeur(id_textarea)
+            {
+                CKEDITOR.replace( id_textarea);
+            }
+  </script>
+
+<form id="form-enr"  action="{% url 'gestionCours:admin_enregistrer_Professeur_form' %}" method="get">
+
+<fieldset id="field-enr" >
+
+    <label for="nom" class="lab2">Nom :</label><input class="textfield" type="text" name="nom" required><br>
+    <label for="prenom" class="lab2">Prenom :</label><input class="textfield" type="text" name="prenom" required><br>
+    <label for="NoId" class="lab2">No Identite :</label><input class="textfield" type="text" name="NoId" required><br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <h3>CV</h3>
+    <br>
+    <label for="AdresseProfessionnelle" class="lab2">Adresse professionnelle :</label><input class="textfield" type="text" name="ad_prof" required><br>
+    <label for="SituationActuelle" class="lab2">Situation actuelle :</label><input class="textfield" type="text" name="sit_act" required><br>
+    <label for="Etablissement" class="lab2">Etablissement :</label><input class="textfield" type="text" name="etablissement" required><br>
+     <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <label for="EmploiActuel" class="lab3">Emploie actuel:</label><br><textarea id="EmploiActuel"  name="EmploiActuel" rows="10"  required></textarea><br>
+    <script> editeur("EmploiActuel") </script>
+    <label for="Formation" class="lab3">Formation / Titre Universitaire:</label><br><textarea id="Formation" name="Formation" rows="10" required></textarea><br>
+    <script> editeur("Formation") </script>
+    <label for="EmploisPrecedents" class="lab3">Emplois Precedents :</label><br><textarea id="EmploisPrecedents" name="EmploisPrecedents" rows="10" required></textarea><br>
+    <script> editeur("EmploisPrecedents") </script>
+    <label for="Experiencesdenseignement" class="lab3">Experiences d'enseignement :</label><br><textarea id="Experiencesdenseignement" name="Experiencesdenseignement" rows="10" required></textarea><br>
+    <script> editeur("Experiencesdenseignement") </script>
+    <label for="ExperienceProfessionnelle" class="lab3">Experience Professionnelle :</label><br><textarea id="ExperienceProfessionnelle" name="ExperienceProfessionnelle" rows="10" required></textarea><br>
+    <script> editeur("ExperienceProfessionnelle") </script>
+    <label for="ResponsabiliteAdministrative" class="lab3">Responsabilite Administrative:</label><br><textarea id="ResponsabiliteAdministrative" name="ResponsabiliteAdministrative" rows="10" required></textarea><br>
+    <script> editeur("ResponsabiliteAdministrative") </script>
+
+
+
+<input class="sub" type="submit" value="Inserer">
+</fieldset>
+</form>
+
+<p> {{reponse}}</p>
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+

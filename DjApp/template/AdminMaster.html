@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+     {% load staticfiles %}
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/default.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    {% block css %}     {% endblock %}
+    <title>{% block title %}Master{% endblock %}</title>
+</head>
+<body>
+
+
+<div class="page-container">
+<div id="form1" >     
+<header>
+  
+<h1 class="logo">Plateforme de description des cours</h1>
+</header>
+     
+        
+<div class="body-container">
+<div id="position-menu">
+            
+        </div> 
+ <div id="login-position">   
+
+ <div id="content-log-menu" >
+
+  
+    <div id="log-info">
+
+     <a href="{% url 'gestionCours:logout' %}">Logout</a>
+  </div>
+
+<div id="menu-div">
+<nav id="menu-content">
+<ul id="menu">
+
+        <li><a href="{% url 'gestionCours:Adming' %}">Accueil</a></li>
+        <li><a href="#">Listing  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_listing_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_listing_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+        </li>
+
+        <li><a href="#">Enregistrement &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_enregistrer_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+
+        </li>
+
+        <li><a href="#">Modification  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_modification_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_modification_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+
+        </li>
+
+
+        <li><a href="#">Suppression  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_supression_etablissement' %}">Etablissment</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_NomCours' %}">Nom Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Programme' %}">Programme</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Cours' %}">Cours</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Professeur' %}">Professeur</a></li>
+
+                </ul>
+
+
+
+
+
+        </li>
+
+
+         <li><a href="#">Utilisateur  &dtrif;</a>
+                <ul>
+                        <li><a href="{% url 'gestionCours:admin_listing_utilisateur' %}">Liste des Utilisateurs</a></li>
+                        <li><a href="{% url 'gestionCours:admin_utilisateur_ajouter' %}">Ajouter Utilisateur</a></li>
+                        <li><a href="{% url 'gestionCours:admin_utilisateur_changer_password' %}">Changer Mot de passe</a></li>
+                        <li><a href="{% url 'gestionCours:admin_supression_Utilisateur' %}">Suppression Utilisateur</a></li>
+
+                </ul>
+
+
+
+
+
+        </li>
+
+
+</ul>
+
+</nav>
+      </div>
+</div>
+
+
+
+ </div>
+<div class="body-container-titles">
+Administration
+    
+</div>
+     
+         
+     
+       
+  <!--  <div id="cadran" > -->
+       
+        
+       <div class="line2"></div>
+         
+    <div id="content-title2" >
+      <h3>  {% block content-title %}Projet :[-------------]{% endblock %}
+      </h3>
+           </div>
+			
+         
+         
+             <div>
+			 {% block workon %} {% endblock %}
+            
+                 </div>
+            <div id="info-content">  
+            
+                <div id="grid-content">
+                    <table>
+                        <tr>
+                            <td>
+             <div id="bouton">
+			 {% block upbouton %} {% endblock %}
+              
+         </div>
+                                </td>
+             </tr>
+        <tr>
+            <td>
+			{% block content %} {% endblock %}
+        
+                  </td>
+                </tr>
+           </table>    
+                     </div>    
+         </div>
+   <!-- </div> -->
+         
+    
+
+     
+
+
+</div>
+
+<footer>
+<h5>&copy;2014 Plateforme de description des cours-ESIH, All Rights Reserved. | Contactez-Nous</h5>
+</footer>
+
+
+</div>
+</div>
+
+
+
+        
+
+</body>
+</html>

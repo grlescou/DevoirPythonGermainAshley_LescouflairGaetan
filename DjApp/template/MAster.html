@@ -1,0 +1,42 @@
+
+{% comment %}
+           ceci est un comment block
+
+{% endcomment %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<div>
+            <a href="{% url 'gestionCours:home'  %}" >home</a>
+            <a href="{% url 'gestionCours:getPageForm'  %}" >enregistrement</a>
+            <a href="{% url 'gestionCours:getBigUp'  %}" >BigUP</a>
+            <a href="{% url 'gestionCours:donnee'  %}" >Donnee</a>
+            <a href="{% url 'gestionCours:Esuppload' %}" >Supprimer Enregistrement</a>
+
+
+</div>
+<div>
+ {% block content %}
+
+    {% endblock %}
+
+
+</div>
+
+<div>
+
+<hr>
+<h6>site de gestion de description de scours...</h6>
+ <a href="{% url 'gestionCours:Adming' %}" >Admin</a>
+
+</div>
+
+
+</body>
+</html>

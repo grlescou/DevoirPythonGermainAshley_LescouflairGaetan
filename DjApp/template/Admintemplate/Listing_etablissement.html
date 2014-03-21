@@ -1,0 +1,95 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | listing Etablissement{% endblock %}
+
+
+    {% block content-title %}
+ List des etablissements
+
+    {% endblock %}
+
+         {% block workon %} {% endblock %}
+
+    {% block upbouton %} {% endblock %}
+
+ {% block content %}
+
+
+
+
+
+
+
+
+
+   <div id="tableW" >
+ <table class='tableH'  align='center'>
+<tr >
+<th  class='tablehead'>ID</th>
+<th  class='tablehead'>Nom </th>
+<th  class='tablehead'>Lieu</th>
+</tr>
+
+        {% for item in item_list %}
+
+		 {% if forloop.counter|divisibleby:"2" %}
+
+		   <tr >
+            <td class='c10'>{{ item.id }}</td>
+		   <td class='c1'>{{ item.Nom }}</td>
+          <td class='c12'>{{ item.Lieu }}</td>
+
+		   {% else  %}
+		    <tr >
+            <td class='c20'>{{ item.id }}</td>
+			<td class='c2'>{{ item.Nom }}</td>
+            <td class='c22'>{{ item.Lieu }}</td>
+
+
+             </tr>
+            {% endif %}
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+	   	  </table>
+
+
+           <div class="pagination">
+    <span class="step-links">
+        {% if item_list.has_previous %}
+            <a href="?page={{ item_list.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ item_list.number }} of {{ item_list.paginator.num_pages }}.
+        </span>
+
+        {% if item_list.has_next %}
+            <a href="?page={{ item_list.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+
+
+	   </div>
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+

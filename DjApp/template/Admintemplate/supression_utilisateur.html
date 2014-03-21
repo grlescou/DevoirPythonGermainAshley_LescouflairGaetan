@@ -1,0 +1,85 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Supression Utilisateur {% endblock %}
+
+
+    {% block content-title %}
+Supression Utilisateur
+
+    {% endblock %}
+         {% block workon %} {% endblock %}
+
+    {% block upbouton %} {% endblock %}
+
+ {% block content %}
+
+
+
+
+
+
+
+
+
+      <div>
+   <form action="{% url 'gestionCours:admin_supression_Utilisateur_getInfo' %}" method="get">
+<label>Selectionner  a supprimer:</label>
+  <select name="ids">
+      {% for item in item_list %}
+      <option value="{{item.id}}">{{item.User}}</option>
+        {% empty %}
+            <P>Pas d'etablissement</P>
+        {% endfor %}
+
+
+</select>
+ <input type="submit" value="Chercher">
+
+</form>
+
+    <div>
+
+       {% if Et %}
+
+        <form action="{% url 'gestionCours:admin_supression_Utilisateur_Update' %}" method="get">
+    <label>Etablissement a supprimer:</label>
+       <br>
+       <p>User :{{Et.User}}</p>
+       <p>Status :{{Et.Status}}</p>
+
+        <button type="submit" name="id" value="{{Et.id}}" >Supprimer</button>
+        <button type="submit" name="annuler" value="annuler" >Annuler</button>
+
+
+</form>
+
+        {% else %}
+
+        {% endif %}
+
+<p>{{succes}}</p>
+    </div>
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+
+
+
+
+
+    {% endblock %}
+
+

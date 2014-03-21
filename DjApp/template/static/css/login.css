@@ -1,0 +1,59 @@
+#forme{
+	width : 20%;
+	margin-top:10%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 10px;
+	padding-left: 5%;
+	padding-right:5%;
+	height:40%;
+	#background-color:red;
+	background: -moz-linear-gradient(top,  rgba(23,17,89,1) 0%, rgba(91,130,185,1) 67%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(23,17,89,1)), color-stop(67%,rgba(91,130,185,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(23,17,89,1) 0%,rgba(91,130,185,1) 67%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(23,17,89,1) 0%,rgba(91,130,185,1) 67%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(23,17,89,1) 0%,rgba(91,130,185,1) 67%,rgba(125,185,232,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(23,17,89,1) 0%,rgba(91,130,185,1) 67%,rgba(125,185,232,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171159', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+
+	#border : solid 1px red;
+	border-radius:15px;
+	
+}
+
+#forme input {
+padding: 5px;
+margin:5px;
+}
+
+#login{
+width:50px;
+#border : solid 1px black;
+background-color:transparent;
+ margin-left:67%;
+}
+#btnlogin{
+	background-color:midnightblue;
+	width:100%;
+	border:0;
+	color:white;
+}
+#forme form {
+	margin-top:20px;
+
+	#border : solid 1px red;
+	#border-radius:15%;
+
+
+
+}
+#forme h3{
+	margin-top:23px;
+	color:white;
+}
+#user{
+width: 90%;
+}
+#pass{
+width: 90%;
+}

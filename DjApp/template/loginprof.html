@@ -1,0 +1,45 @@
+<html><head>
+<meta charset="utf-8">
+<title>ESIH-login</title>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/default.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+
+<body>
+<div class="page-container">
+<header>
+<h1 class="logo">Plateforme de description cours</h1>
+</header>
+<div class="body-container">
+
+
+
+					<div id="forme">
+					<h3>Professeur</h3>
+                        {{success}}
+					<form   action="{% url 'Prof:login' %}"  method="post">
+
+					<input type="text" name="User" id="user"  placeholder="Username"/>
+					<br/>
+					<input type="password" name="Password" id="pass"  placeholder="Password"/>
+					<br/>
+					<div id="login">
+					<input type="submit" value="Login" id="btnlogin" />
+					</div>
+					</form>
+					</div>
+
+
+
+</div>
+
+<footer>
+<h5>&copy;2014 Plateforme de description cours-ESIH, All Rights Reserved. | Contactez-Nous</h5>
+</footer>
+</div>
+
+
+
+</body></html>

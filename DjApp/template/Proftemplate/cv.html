@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <link href="{% static 'css/cv.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+
+    <title>CV | Professeur </title>
+</head>
+<body>
+
+<script language="javascript">
+function printdiv(printpage, css)
+{
+var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' media='print'/></head><body>";
+   html+= document.getElementById(printpage).innerHTML;
+
+   html+="</body></html>";
+
+   var printWin = window.open('','','left=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,status  =0');
+   printWin.document.write(html);
+   printWin.document.close();
+   printWin.focus();
+   printWin.print();
+   printWin.close();
+
+}
+</script>
+<div>  {% load staticfiles %}<input name="b_print" type="button" class="ipt"   onClick="printdiv('content_cv','{% static 'css/cv.css' %}');" value=" Print CV "></div>
+
+<div id="content_cv">
+
+ {% if  prof %}
+
+    <br>
+    <br>
+    <div id="header">
+         {% load staticfiles %}
+    <div id="image"> <img src="{% static 'images/esih.jpg' %}" ></div>
+
+    <div id="entete" >Dossier ESIH - CURRICULUM VITAE </div>
+
+     </div>
+    <br>
+    <br>
+
+<table>
+
+              <tr>
+               <td class="lab_tete">Nom : </td>
+               <td class="info_tete"> {{prof.Nom}} </td>
+              </tr>
+              <tr>
+               <td class="lab_tete">Prenom : </td>
+               <td class="info_tete"> {{prof.Prenom}} </td>
+              </tr>
+
+              <tr>
+               <td class="lab_tete">No identite: </td>
+               <td class="info_tete">{{prof.NoIndentite}}</td>
+              </tr>
+
+              <tr>
+               <td class="lab_tete">Adresse professionnelle: </td>
+               <td class="info_tete">{{prof.CV.ad_prof}}</td>
+              </tr>
+
+                <tr>
+               <td class="lab_tete">Situation actuelle :</td>
+               <td class="info_tete">{{prof.CV.sit_act}}</td>
+              </tr>
+
+                <tr>
+               <td class="lab_tete">Etablissement :</td>
+               <td class="info_tete">{{prof.CV.etablissement}}</td>
+              </tr>
+            </table>
+    <br>
+
+ <div id="separator"><br></div>
+    <br>
+    <br>
+        <table>
+              <tr>
+               <td  class="lab_corps" colspan='1'>Emploie actuel<br> <hr> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell"> {% autoescape off %}{{prof.CV.EmploiActuel}}{% endautoescape %}</div> </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Formation / Titre Universitaire <br> <hr>  </td>
+
+              </tr>
+              <tr>
+               <td  colspan='1'><div class="divcell"> {% autoescape off %}{{prof.CV.Formation}} {% endautoescape %}</div>   </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Emplois Precedents<br> <hr> <br> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell">{% autoescape off %}{{prof.CV.EmploisPrecedents}}{% endautoescape %} </div>   </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Experiences d'enseignement<br> <hr> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell">{% autoescape off %}{{prof.CV.Experiencesdenseignement}} {% endautoescape %} </div>   </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Experience Professionnelle<br> <hr>  </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell"> {% autoescape off %}{{prof.CV.ExperienceProfessionnelle}}{% endautoescape %} </div>   </td>
+
+              </tr>
+
+            <tr>
+               <td  class="lab_corps" colspan='1'>Responsabilite Administrative <br> <hr>  </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell">{% autoescape off %}{{prof.CV.ResponsabiliteAdministrative}} {% endautoescape %} </div>  </td>
+
+              </tr>
+
+
+              </table>
+
+
+
+
+{% else %}
+
+<p>CV non trouver</p>
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+{% extends "AdminMaster.html" %}
+    {% block css %}
+
+{% load staticfiles %}
+    <link href="{% static 'css/corps_listing_etablissement.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    {% endblock %}
+
+
+   {% block title %}Admin | Accueil{% endblock %}
+
+
+    {% block content-title %}
+Accueil
+
+    {% endblock %}
+
+ {% block content %}
+ <div id="choix">
+     <form method="get" action="{% url 'gestionCours:Adming' %}">
+    <label for="donnee" id="lab1">Choix :</label><select class="select_NC" name="donnee" >
+      <option value="S-ETCS-A">Science&Tech - Volume ETCS par Annee</option>
+      <option value="G-ETCS-A">Economie&Gestion - Volume ETCS par Annee</option>
+      <option value="S-Hour-A">Science&Tech - Volume Horaire par Annee</option>
+      <option value="G-Hour-A">Economie&Gestion - Volume Horaire par Annee</option>
+     <option value="D-ETCS">Volume ETCS par Diplome</option>
+      <option value="D-Hour">Volume Horaire par Diplome</option>
+</select><br>
+<input type="submit" value="Valider"/>
+</form>
+
+ </div>
+<div>
+
+    {% if D_Hour %}
+
+    {{ hor.chart_DH.title }}
+
+    {% endif  %}
+    </div>
+
+    <div>
+
+    {% if D_ETCS %}
+
+    {{ hor.chart_DE.title }}
+
+    {% endif  %}
+     </div>
+
+    <div>
+    {% if S_ETCS_A %}
+
+    {{ hor.chart_YE_SI.title }}
+
+    {% endif  %}
+
+     </div>
+
+    <div>
+    {% if S_Hour_A %}
+
+    {{ hor.chart_YH_SI.title }}
+
+    {% endif  %}
+
+     </div>
+
+    <div>
+    {% if G_ETCS_A %}
+
+    {{ hor.chart_YE_EG.title }}
+
+    {% endif  %}
+
+     </div>
+
+     <div>
+    {% if G_Hour_A  %}
+
+    {{ hor.chart_YH_EG.title }}
+
+
+    {% endif %}
+
+      </div>
+
+
+
+
+
+<div>
+
+    {% if D_Hour  %}
+
+    {{ hor.chart_DH  }}
+
+</div>
+   <div>
+    {% endif %}
+
+    {% if D_ETCS  %}
+
+    {{ hor.chart_DE }}
+
+
+    {% endif %}
+
+  </div>
+
+  <div>
+    {% if S_ETCS_A  %}
+
+    {{ hor.chart_YE_SI }}
+
+
+    {% endif %}
+
+      </div>
+
+    <div>
+    {% if S_Hour_A  %}
+
+    {{ hor.chart_YH_SI }}
+
+
+    {% endif %}
+
+      </div>
+
+
+     <div>
+    {% if G_ETCS_A  %}
+
+    {{ hor.chart_YE_EG }}
+
+
+    {% endif %}
+
+      </div>
+
+    <div>
+    {% if G_Hour_A  %}
+
+    {{ hor.chart_YH_EG }}
+
+
+    {% endif %}
+
+      </div>
+
+
+
+
+
+    {% endblock %}
+
+

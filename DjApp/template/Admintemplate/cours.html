@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <link href="{% static 'css/cv.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+
+    <title>CV | Professeur </title>
+</head>
+<body>
+<script language="javascript">
+function printdiv(printpage, css)
+{
+var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' media='print'/></head><body>";
+   html+= document.getElementById(printpage).innerHTML;
+
+   html+="</body></html>";
+
+   var printWin = window.open('','','left=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,status  =0');
+   printWin.document.write(html);
+   printWin.document.close();
+   printWin.focus();
+   printWin.print();
+   printWin.close();
+
+}
+</script>
+<div>  {% load staticfiles %}<input name="b_print" type="button" class="ipt"   onClick="printdiv('content_cv','{% static 'css/cv.css' %}');" value=" Print CV "></div>
+
+
+<div id="content_cv">
+ {% if  item %}
+    <br>
+    <br>
+    <div id="header">
+         {% load staticfiles %}
+    <div id="image"> <img src="{% static 'images/esih.jpg' %}" ></div>
+
+    <div id="entete" >Dossier ESIH - Cours </div>
+
+     </div>
+    <br>
+    <br>
+
+<table>
+
+
+              <tr>
+               <td class="lab_tete">ID cours : </td>
+               <td class="info_tete"> {{item.IDcours}} </td>
+              </tr>
+              <tr>
+               <td class="lab_tete">ID programme: </td>
+               <td class="info_tete"> {{item.IDprogramme}} </td>
+              </tr>
+
+              <tr>
+               <td class="lab_tete">Titre : </td>
+               <td class="info_tete">{{item.Titre }}</td>
+              </tr>
+
+              <tr>
+               <td class="lab_tete">Professeur et Lien vers CV: </td>
+               <td class="info_tete">{{ item.IDprofesseur }} et <a href="{% url 'gestionCours:admin_Show_CV_professeur' %}?id={{item.IDprofesseur.id}}" target="_blank">Lien vers CV</a> </td></td>
+              </tr>
+
+                <tr>
+               <td class="lab_tete">Prerequis :</td>
+               <td class="info_tete">{% autoescape off %}{% for prek in item.Prerequis.all %} {{prek}} {% empty %} pas de prerequis{% endfor %}{% endautoescape %}</td>
+              </tr>
+
+
+            </table>
+    <br>
+
+ <div id="separator"><br></div>
+    <br>
+    <br>
+        <table>
+              <tr>
+               <td  class="lab_corps" colspan='1'>Objectif<br> <hr> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell"> {% autoescape off %}{% ifequal item.Objectif '' %} pas encore modifier {% else %} {{ item.Objectif}} {% endifequal %}{% endautoescape %}</div> </td>
+
+              </tr>
+            <!--
+            <tr>
+               <td  class="lab_corps" colspan='1'>Prerequis<br> <hr> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell"> {% autoescape off %}{% for prek in item.Prerequis.all %} {{prek}} {% empty %} pas de prerequis{% endfor %}{% endautoescape %}</div> </td>
+
+              </tr>
+              -->
+            <tr>
+               <td class="lab_corps" colspan='1'>Description <br> <hr>  </td>
+
+              </tr>
+              <tr>
+               <td  colspan='1'><div class="divcell"> {% autoescape off %}{% ifequal item.Description '' %} pas encore modifier {% else %}   {{ item.Description }} {% endifequal %} {% endautoescape %}</div>   </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Plan<br> <hr> <br> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell">{% autoescape off %}{% ifequal item.Plan '' %} pas encore modifier {% else %} {{ item.Plan }} {% endifequal %}{% endautoescape %} </div>   </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Format<br> <hr> </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell">{% autoescape off %}{% ifequal item.Format '' %} pas encore modifier {% else %}  {{ item.Format }} {% endifequal %}{% endautoescape %} </div>   </td>
+
+              </tr>
+            <tr>
+               <td class="lab_corps" colspan='1'>Ressource<br> <hr>  </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell"> {% autoescape off %}{% ifequal item.Ressource '' %} pas encore modifier {% else %} {{ item.Ressource }} {% endifequal %}{% endautoescape %} </div>   </td>
+
+              </tr>
+
+            <tr>
+               <td  class="lab_corps" colspan='1'>Evaluation <br> <hr>  </td>
+
+              </tr>
+              <tr>
+               <td colspan='1'><div class="divcell">{% autoescape off %}{% ifequal item.Evaluation '' %} pas encore modifier {% else %} {{ item.Evaluation }} {% endifequal %} {% endautoescape %} </div>  </td>
+
+              </tr>
+
+
+              </table>
+
+
+
+
+{% else %}
+
+<p>cours non trouver</p>
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

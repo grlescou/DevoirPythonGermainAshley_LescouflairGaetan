@@ -1,0 +1,29 @@
+{% extends "MAster.html" %}
+
+{% block title %} Forme Etablissement{% endblock %}
+
+ {% block content %}
+
+        <h1>Forme Etablissement</h1>
+
+<form action="../institution/" method="get">
+
+ <label>Nom :</label><input type="text" name="nom"><br>
+ <label>Lieu    :</label><input type="text" name="lieu"><br>
+ <input type="submit" value="Inserer">
+
+</form>
+
+<p> {{reponse}}</p>
+
+
+ {% endblock %}
+
+
+
+
+
+
+
+
+

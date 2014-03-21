@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+     {% load staticfiles %}
+    <link href="{% static 'css/error.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+
+    {% block css %}     {% endblock %}
+    <title>{% block title %}Master{% endblock %}</title>
+</head>
+<body>
+
+<div id="center-content">
+ {% load staticfiles %}
+<div id="center-img"> <img src="{% static 'images/Error404.png' %}" id="logo"></div>
+<div id="info">{{info}}</div>
+</div>
+</body>
+</html>
