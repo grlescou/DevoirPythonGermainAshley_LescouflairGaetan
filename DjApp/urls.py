@@ -13,7 +13,8 @@ urlpatterns = patterns('',
     #url(r'^$', 'gestionCours.views.home', name='home'),# home page
     # url(r'^gestionCours/',include('gestionCours.urls',namespace='gestionCours')),
     (r'^Prof/',include('Prof.urls',namespace='Prof')),
-    (r'^$',include('public.urls',namespace='public')),
+    (r'^',include('public.urls',namespace='public')),
+    #(r'^public/',include('public.urls',namespace='public')),
 
 
 

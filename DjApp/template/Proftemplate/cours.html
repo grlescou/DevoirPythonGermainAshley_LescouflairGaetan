@@ -60,7 +60,7 @@ var html="<html><head><link href='"+css+"' rel='stylesheet' type='text/css' medi
 
               <tr>
                <td class="lab_tete">Professeur et Lien vers CV: </td>
-               <td class="info_tete">{{ item.IDprofesseur }} et <a href="{% url 'gestionCours:admin_Show_CV_professeur' %}?id={{item.IDprofesseur.id}}" target="_blank">Lien vers CV</a> </td></td>
+               <td class="info_tete">{{ item.IDprofesseur }} et <a href="{% url 'Prof:prof_Show_CV_professeur' %}?id={{item.IDprofesseur.id}}" target="_blank">Lien vers CV</a> </td></td>
               </tr>
 
                 <tr>

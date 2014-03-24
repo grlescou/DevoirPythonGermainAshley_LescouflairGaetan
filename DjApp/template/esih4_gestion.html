@@ -1,0 +1,27 @@
+{% extends "esih4_basePage.html" %}
+
+
+         {% block corps %}
+<div id="bandetab">
+	<h3>Cours Economie et Gestion </h3>
+	</div>
+	<div id="corpstb">
+ <h3>Session 1 </h3>
+
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=L1;s=S1">Licence 1</a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=L2;s=S1">Licence 2</a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=L3;s=S1">Licence 3</a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=M1;s=S1">Master 1 </a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=M2;s=S1">Master 2</a></li>
+
+
+
+      <h3>Session 2 </h3>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=L1;s=S2">Licence 1</a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=L2;s=S2">Licence 2</a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=L3;s=S2">Licence 3</a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=M1;s=S2">Master 1 </a></li>
+     <li><a href="{% url 'public:list_cours' %}?m=EG;niv=M2;s=S2">Master 2</a></li>
+
+	</div>
+        {% endblock %}

@@ -1697,6 +1697,22 @@ def admin_enregistrer_Cours (request):
                 PubliqueCible =  request.POST['PubliqueCible'] # multiple
                 #Prerequis = request.POST['Prerequis'] # multiple
 
+                if Credits.isdigit() :
+                    cred = int(Credits)
+                    if cred > 4 :
+                        t = get_template('404Error.html')
+                        html = t.render(Context({'info': 'Erreur dans la page '}))
+                        return HttpResponse(html)
+                    if cred < 1 :
+                        t = get_template('404Error.html')
+                        html = t.render(Context({'info': 'Erreur dans la page '}))
+                        return HttpResponse(html)
+                if not  Credits.isdigit() :
+                    t = get_template('404Error.html')
+                    html = t.render(Context({'info': 'Erreur dans la page '}))
+                    return HttpResponse(html)
+
+
 
 
                 isIn = Cours.objects.filter(IDcours=IDcours,IDprogramme=IDprogramme,Titre = Titre,Credits=Credits,IDprofesseur=IDprofesseur ).exists()

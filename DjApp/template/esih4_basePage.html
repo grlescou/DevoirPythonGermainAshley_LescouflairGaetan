@@ -1,0 +1,77 @@
+<html>
+	<head>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'css/esih4.css' %}" type="text/css" media="screen" />
+		<title>ESIH- plateforme...</title>
+	</head>
+	<body>
+		<div id="pageEsih">
+
+
+		
+			<div id="entete">
+               <!--<img src="{% static 'images/background/esih60.jpg' %}" height=450 width=251/>-->
+
+
+				<div id="logo">
+					<img src="{% static 'images/logo_esih.png' %}"/>
+
+				</div>
+				<h2>ECOLE SUPERIEURE D'INFOTRONIQUE D'HAITI</h2>
+                <h6>Plateforme de description des cours</h6>
+
+			</div>
+
+			
+				<div id="sentete">
+
+            <nav id="menu-content">
+                    <ul id="menu">
+
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="#">Cours &dtrif;</a>
+                    <ul>
+                        <li><a href="{% url 'public:esih4_Cours_SInfo' %}">Sciences et Technologie</a></li>
+                       <li><a href="{% url 'public:esih4_Cours_gestion' %}">Economie et Gestion</a></li>
+
+                    </ul>
+
+                        </li>
+
+                <li><a href="#">Contact </a>
+
+
+                </li>
+
+
+
+
+                </ul>
+
+                </nav>
+                    <ul id="menu2">
+                 <li><a href="{% url 'gestionCours:Adming' %}">Administration</a></li>
+                  <li><a href="{% url 'Prof:prof'  %}">Professeur</a></li>
+                   </ul>
+
+				</div>
+
+			<div id="corps">
+               {% block corps %}
+
+                 {% endblock %}
+				<!--<img src="{% static 'images/esih1.jpg' %}" height=450 width=951/>-->
+				</div>
+				<div id="foot">
+				<h5>&copy;2014 Plateforme de description des cours-ESIH, All Rights Reserved. | Contactez-Nous</h5>
+                    create
+				</div>
+			
+
+		</div>
+
+	
+	</body>
+	
+
+</html>

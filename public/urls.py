@@ -19,6 +19,12 @@ urlpatterns = patterns('',
     # url(r'^enregistrement/','getPageForm'),
     # url(r'^bigup/','getBigUp')
     url(r'^$', 'public.views.home', name='home'),
+    url(r'^esih4_Cours_gestion/', 'public.views.esih4_Cours_gestion', name='esih4_Cours_gestion'),
+    url(r'^esih4_Cours_SInfo/', 'public.views.esih4_Cours_SInfo', name='esih4_Cours_SInfo'),
+    url(r'^list_cours/', 'public.views.list_cours', name='list_cours'),
+
+    url(r'^public_Show_CV_Cours/', 'public.views.public_Show_CV_Cours', name='public_Show_CV_Cours'),
+    url(r'^public_Show_CV_professeur/', 'public.views.public_Show_CV_professeur', name='public_Show_CV_professeur'),
 
 
 
