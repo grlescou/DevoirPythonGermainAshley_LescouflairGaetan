@@ -27,10 +27,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminMaster.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AdminMaster.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjApp/template/AdminMaster.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="29" selection-start="855" selection-end="855" vertical-scroll-proportion="0.76080245" vertical-offset="0" max-vertical-offset="3349">
+            <state line="29" column="29" selection-start="855" selection-end="855" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="3349">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esih4_basePage.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_basePage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esih4_Cours_gestion.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_Cours_gestion.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="306">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esih4_Cours_SInfo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_Cours_SInfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -40,6 +67,15 @@
         <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_gestion.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="51" selection-start="1016" selection-end="1016" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="544">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esih4.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DjApp/template/esih4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
@@ -74,44 +110,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stat.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myApp/Stat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="96" selection-start="4158" selection-end="4161" vertical-scroll-proportion="0.0" vertical-offset="1317" max-vertical-offset="3927">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cv.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjApp/template/cv.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="203" selection-end="873" vertical-scroll-proportion="-14.192307" vertical-offset="107" max-vertical-offset="2720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminG.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DjApp/template/adminG.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="-6.6153846" vertical-offset="117" max-vertical-offset="2788">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="enregistrement_Cours2.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjApp/template/Admintemplate/enregistrement_Cours2.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,10 +129,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DjApp/template/esih4_Cours_SInfo.html" />
         <option value="$PROJECT_DIR$/DjApp/urls.py" />
         <option value="$PROJECT_DIR$/DjApp/template/esih4_basePage.html" />
-        <option value="$PROJECT_DIR$/DjApp/template/esih4.html" />
         <option value="$PROJECT_DIR$/DjApp/template/esih4_SI.html" />
         <option value="$PROJECT_DIR$/public/urls.py" />
         <option value="$PROJECT_DIR$/DjApp/template/pubListing_Cours.html" />
@@ -147,6 +143,8 @@
         <option value="$PROJECT_DIR$/DjApp/template/ProfMaster.html" />
         <option value="$PROJECT_DIR$/DjApp/template/ProfM.html" />
         <option value="$PROJECT_DIR$/DjApp/template/AdminMaster.html" />
+        <option value="$PROJECT_DIR$/DjApp/template/esih4_Cours_SInfo.html" />
+        <option value="$PROJECT_DIR$/DjApp/template/esih4.html" />
       </list>
     </option>
   </component>
@@ -666,34 +664,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="113" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/pubListing_Cours.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="22" selection-start="1351" selection-end="1351" vertical-scroll-proportion="-11.230769" vertical-offset="524" max-vertical-offset="1989">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/Proftemplate/cours.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="85" selection-start="1784" selection-end="1784" vertical-scroll-proportion="-13.192307" vertical-offset="711" max-vertical-offset="2822">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/cours.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="87" selection-start="1786" selection-end="1786" vertical-scroll-proportion="-18.115385" vertical-offset="583" max-vertical-offset="2822">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prof/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="184" column="0" selection-start="4404" selection-end="5909" vertical-scroll-proportion="0.0" vertical-offset="2773" max-vertical-offset="4641">
@@ -706,13 +676,6 @@
     <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_SI.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="62" selection-start="322" selection-end="338" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_gestion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="51" selection-start="1016" selection-end="1016" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
@@ -779,7 +742,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DjApp/template/AdminMaster.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="29" selection-start="855" selection-end="855" vertical-scroll-proportion="0.76080245" vertical-offset="0" max-vertical-offset="3349">
+        <state line="29" column="29" selection-start="855" selection-end="855" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="3349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_Cours_gestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="674">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_Cours_SInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_gestion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="51" selection-start="1016" selection-end="1016" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjApp/template/esih4_basePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
           <folding />
         </state>
       </provider>
